@@ -1,4 +1,3 @@
-# doubanIamnotyaoshen
 #!/usr/bin/env python3
 # -*- coding: utf-8-*-
 
@@ -33,20 +32,20 @@ from pyecharts import Bar
 import jieba
 
 
-# 第一步：请求豆瓣服务器，获取数据。
+    # 第一步：请求豆瓣服务器，获取数据。
+    
+    # 第二步：对请求回来的数据解析
+    
+    # 第三步：展示解析后的数据
 
-# 第二步：对请求回来的数据解析
 
-# 第三步：展示解析后的数据
-
-
-# 构建请求头部
+    # 构建请求头部
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"}
 
 
-# 获取豆瓣电影数据
+    # 获取豆瓣电影数据
 
 def data(page):
 
@@ -120,7 +119,7 @@ def data(page):
     sava(list1)
 
 
-# 解析数据
+    # 解析数据
 
 def sava( list11 ):
 
@@ -160,21 +159,21 @@ def sava( list11 ):
 
             # print(sql)
 
-    # 关闭数据库连接
+        # 关闭数据库连接
 
     db.close()
 
 
-# 将数据存储到数据库后，下一步就开始对数据进行分析了。
-
-# 数据分析的角度：基于目标用户场景需求，对内容数据涵盖的字段，进行分析
-
-# 分析点评数据
+    # 将数据存储到数据库后，下一步就开始对数据进行分析了。
+    
+    # 数据分析的角度：基于目标用户场景需求，对内容数据涵盖的字段，进行分析
+    
+    # 分析点评数据
 
 def pJ():
 
-# 执行查询语句
 
+   
     sql="select xingji,count(xingji) as f from ysmovies group by xingji"
 
     cursor1.execute(sql)
@@ -281,9 +280,6 @@ def wordc():
 
 wordc()
 
-# 设置公共模块，以便其他模块调用
-
-# def commonMoudle():
 
 if __name__ == '__main__':
 
